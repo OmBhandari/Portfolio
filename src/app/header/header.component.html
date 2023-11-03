@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+        <h1>OM BHANDARI</h1>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a routerLink="/home" routerLinkActive="active" class="header__link active"> Home </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#about" routerLinkActive="active" class="header__link">About </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#projects" routerLinkActive="active" class="header__link"> Projects </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="#contact" routerLinkActive="active" class="header__link"> Contact </a>
+          </li>
+          <li class="header__link-wrapper" style="cursor: pointer;">
+            <a routerLinkActive="active" class="header__link" (click)="downloadMyFile()" >
+              CV <i class="fa-solid fa-file-arrow-down fa-bounce fa-xl"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>

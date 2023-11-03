@@ -1,0 +1,176 @@
+<section class="hero home-hero">
+  <div class="container">
+    <h1 class="heading heading-primary">
+      <span class="heading-primary__text">MEAN Stack Developer</span>
+    </h1>
+    <div class="hero__info home-hero__info">
+      <p class="text-sec hero__text-primary">
+        A professional responsible for working on both front-end and back-end
+        development processes. Design, develop, maintain fully-fledged and
+        functioning platforms with databases or servers.
+      </p>
+    </div>
+    <div class="hero__cta home-hero__cta">
+      <a href="#about" class="button button--primary hero__button">About Me</a>
+      <a href="#projects" class="button button--secondary hero__button">
+        My Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__main">
+      <div class="about__content">
+        <div class="about__main-content">
+          <h2 class="heading heading-sec section-heading">
+            <span>About</span>
+          </h2>
+          <div class="about__text-content">
+            <p class="text-sec about__text-sec">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              iure ratione inventore in quam vitae quidem mollitia praesentium
+              natus voluptates, explicabo, aliquid illo laborum consectetur
+              iusto, totam optio enim dolorum.
+            </p>
+            <br />
+            <p class="text-sec about__text-sec">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              iure ratione inventore in quam vitae quidem mollitia praesentium
+              natus voluptates, explicabo, aliquid illo laborum consectetur
+              iusto, totam optio enim dolorum.
+            </p>
+            <br />
+            <p class="text-sec about__text-sec">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              iure ratione inventore in quam vitae quidem mollitia praesentium
+              natus voluptates, explicabo, aliquid illo laborum consectetur
+              iusto, totam optio enim dolorum.
+            </p>
+          </div>
+          <a href="#contact" class="button button--primary"> Contact </a>
+        </div>
+        <div class="about__visual-content">
+          <div class="about__img-cont">
+            <img
+              src="../assets/jpeg/pic.jpg"
+              class="about__img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <br />&nbsp;
+  <div class="container">
+    <h2 class="heading heading-sec section-heading">
+      <span>Projects</span>
+    </h2>
+    <div class="projects-list">
+      <div class="projects-list__project">
+        <div class="projects-list__img-cont">
+          <img src="../assets/jpeg/project-thumbnail-demo.jpeg" alt="" class="projects-list__img" />
+        </div>
+        <h3 class="projects-list__heading">My Portfolio Website</h3>
+        <p class="text-tertiary projects-list__text-tertiary">
+          Fashion Feet is a responsive online ecommerce website for Footwear.
+          Developed and mainted application using Mongodb, ExpressJs,Angular &
+          NodeJs. Implemented functionalities like adminstration, product
+          management,product details, cart, checkout, online payement gateway
+          integration, user and order management. Reduced page load by
+          optimizing backend APIs and services.
+        </p>
+        <a routerLink="/project1" class="button button--theme projects-list__button">Case Study</a>
+      </div>
+      <div class="projects-list__project">
+        <div class="projects-list__img-cont">
+          <img src="../assets/jpeg/project-thumbnail-demo.jpeg" alt="" class="projects-list__img" />
+        </div>
+        <h3 class="projects-list__heading">E-Commerce</h3>
+        <p class="text-tertiary projects-list__text-tertiary">
+          Fashion Feet is a responsive online ecommerce website for Footwear.
+          Developed and mainted application using Mongodb, ExpressJs,Angular &
+          NodeJs. Implemented functionalities like adminstration, product
+          management,product details, cart, checkout, online payement gateway
+          integration, user and order management. Reduced page load by
+          optimizing backend APIs and services.
+        </p>
+        <a routerLink="/project2" class="button button--theme projects-list__button">Case Study</a>
+      </div>
+      <div class="projects-list__project">
+        <div class="projects-list__img-cont">
+          <img src="../assets/jpeg/project-thumbnail-demo.jpeg" alt="" class="projects-list__img" />
+        </div>
+        <h3 class="projects-list__heading">KidCoder</h3>
+        <p class="text-tertiary projects-list__text-tertiary">
+          This project is about an educational firm that offers IT Training.
+          Developed and mainted application using Mongodb, ExpressJs,Angular &
+          NodeJs. Created REST API to integrate frontend and backend components
+          using NodeJs & ExpressJs. Used Angular to implement rich functionality
+          in various pages: form validation, Carousel, Pagination,Spinner,
+          animation etc.
+        </p>
+        <a routerLink="/project3" class="button button--theme projects-list__button">Case Study</a>
+      </div>
+      <div class="projects-list__project">
+        <div class="projects-list__img-cont">
+          <img src="../assets/jpeg/project-thumbnail-demo.jpeg" alt="" class="projects-list__img" />
+        </div>
+        <h3 class="projects-list__heading">Adikem Colours</h3>
+        <p class="text-tertiary projects-list__text-tertiary">
+          This project is about paint manufacturing company which is developed
+          in HTML, CSS, Bootstrap, Javascript & Angular . Integrate multiple
+          pages into a single-page application and Design interactive web pages
+          using Angular & JavaScript. Conduct testing of completed applications
+          to assess user experience.
+        </p>
+        <a routerLink="/project4" class="button button--theme projects-list__button">Case Study</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <br />&nbsp;
+  <div class="container">
+    <h2 class="heading heading-sec section-heading contact__heading">
+      <span>Contact</span>
+    </h2>
+    <div class="contact__form-container">
+      <form class="contact__form" [formGroup]="formdata">
+        <div class="contact__form-field">
+          <input placeholder="Name" type="text" class="contact__form-input" formControlName="name" />
+          <span *ngIf="
+              !formdata.controls.name.valid && formdata.controls.name.touched
+            " class="text-danger h4">Please enter Name.</span>
+        </div>
+        <div class="contact__form-field">
+          <input placeholder="Email" type="email" class="contact__form-input" formControlName="email" />
+          <span *ngIf="
+              !formdata.controls.email.valid && formdata.controls.email.touched
+            " class="text-danger h4">Please enter Email.</span>
+        </div>
+        <div class="contact__form-field">
+          <input placeholder="Phone Number" type="number" class="contact__form-input" formControlName="phoneno" />
+          <span *ngIf="
+              !formdata.controls.phoneno.valid && formdata.controls.phoneno.touched
+            " class="text-danger h4">Please enter Phone Number.</span>
+        </div>
+        <div class="contact__form-field">
+          <textarea rows="6" class="contact__form-input" placeholder="Message" formControlName="message"></textarea>
+          <span *ngIf="
+              !formdata.controls.message.valid && formdata.controls.message.touched
+            " class="text-danger h4">Please enter Message.</span>
+        </div>
+        <button class="button button--primary contact__button" [disabled]="!formdata.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="to-top btn btn-danger btn-lg px-4 py-4 rounded-circle" *ngIf="isShow" (click)="gotoTop()">
+  <i class="fa fa-angles-up fa-2xl"></i>
+</div>
